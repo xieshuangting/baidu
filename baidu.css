@@ -1,0 +1,575 @@
+html,
+body{
+	height: 100%;
+}
+body{
+	font-family: Arial,Helvetica,"microsoft YaHei",sans-serif;
+	min-height: 600px;
+	min-width: 960px;
+	font-size: 12px;
+}
+*{
+	margin:0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+
+/*顶部通顶条的设置*/
+header{
+	min-width: 960px;
+	height: 32px;
+	background: rgba(0,0,0,.3);
+}
+/*天气设置*/
+.weather{
+	margin-left: 10px;
+	float: left;
+}
+.weather_addr,.temperature_wrap,.airquality_wrap{
+	display: inline-block;
+	line-height: 32px;
+	color: #fff;
+	font-weight: normal;
+	font-size: 12px;
+}
+.weather_addr a,.temperature_wrap a,.airquality_wrap a{
+	text-decoration: none;
+	color: #fff;
+}
+.airquality_wrap{
+	margin:0 5px 0 10px;
+}
+.air_level{
+	margin-right:10px;
+}
+#current_temp_icon{
+	vertical-align: middle;
+}
+/*竖线分隔条*/
+.weather:after{
+	content: '|';
+	color: #fff;
+}
+/*未来天气，悬浮出现*/
+.future_temper_wrap{
+	display: none;
+	box-sizing: border-box;
+	box-shadow: 0 0 1px rgba(0,0,0,0.2);
+	padding: 10px;
+	width: 550px;
+	color: #333;
+	position: absolute;
+	z-index: 10;
+	top: 32px;
+	left: 0px;
+	background: #fff;
+}
+.future_temper_wrap a{
+	color: #398bfb;
+}
+.future_temper_wrap:before{
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: #fff;
+	transform: rotate(45deg);
+	top: -4px;
+	left: 80px;
+}
+.future_temper_wrap>p{
+	display: inline-block;
+	margin-right: 10px;
+}
+.future_temper_wrap ul{
+	font-size: 0;
+	border-top: 1px solid #eee;
+	padding-top: 10px;
+}
+.future_temper_wrap ul li{
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+	width: 105px;
+}
+.future_temper_wrap ul li a{
+	display: block;
+	color: #333;
+}
+.future_temper_wrap ul li p{
+	height: 18px;
+	line-height: 18px;
+}
+/*天气结束*/
+
+/*个人习惯设置 user*/
+.user{
+	float: left;
+	height: 32px;
+	line-height: 32px;
+	margin-left: 10px;
+}
+.user li{
+	display: inline-block;
+	margin-right: 15px;
+}
+.user li a{
+	color: #fff;
+}
+/*个人习惯设置结束*/
+
+/*主导航条设置开始*/
+nav.main_menu{
+	float: right;
+	margin-right: 100px;
+}
+nav.main_menu a{
+	color: #fff;
+}
+nav.main_menu>ul>li{
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	margin: 0 10px;
+	font-size: 14px;
+	position: relative;
+	font-weight: bold;
+}
+nav.main_menu>ul ul{
+	position: absolute;
+	box-sizing: border-box;
+	top: 32px;
+	background: #fff;
+	border:1px solid #eee;
+	z-index: 10;
+	display: none;
+}
+nav.main_menu>ul>li:hover>ul{
+	display: block;
+}
+nav.main_menu>ul ul a{
+	display: block;
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+	width: 58px;
+	height: 28px;
+	padding-left: 10px;
+	line-height: 28px;
+	z-index: 9;
+    font-weight: normal;
+}
+nav.main_menu>ul ul a:hover{
+	background: #398bfb;
+	color: #fff;
+}	
+/*小箭头效果*/
+nav.main_menu>ul ul:before{
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: #fff;
+	transform: rotate(45deg);
+	top: -4px;
+	left: 29px;
+	z-index: -1;
+}
+#user_info{
+	left: -2px;
+}
+#user_config{
+	left: -20px;
+}
+/*主导航条设置完毕*/
+
+/*侧边导航条设置开始*/
+aside{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 90px;
+	background: #398bfb;
+	z-index: 20;
+}
+aside>a{
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	width: 90px;
+	height: 32px;
+	background: #398bfb;
+}
+aside:hover>a{
+	color: #111;
+	background: #f9f9f9;
+}
+aside>a h1{
+	font-size: 14px;
+	line-height: 32px;
+	font-weight: normal;
+}
+aside ul{
+	text-align: center;
+	display: none;
+}
+aside:hover ul{
+	display: block;
+}
+aside:hover{
+	background: #f9f9f9;
+	height: 100%;
+}
+aside ul img{
+	width: 40px;
+}
+aside ul li{
+	margin: 10px auto 0;
+	padding: 10px 0 5px;
+	width: 80px;
+	font-size: 13px;
+	border-top: 1px solid #eee;
+}
+aside ul li a{
+	text-decoration: none;
+	color: #333;
+}
+aside ul li a:hover{
+	text-decoration: underline;
+	font-weight: bold;
+}
+/*侧边导航条设置完毕*/
+
+/*主搜索区域开始*/
+.search_wrap{
+	width: 700px;
+	height: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+.search_wrap form input{
+	box-sizing: border-box;
+	float: left;
+	width: 530px;
+	height: 40px;
+	font-size: 16px;
+	line-height: 40px;
+	padding-left: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	border:none;
+	outline: none;
+}
+.search_wrap form button,
+.search_float_wrap form button{
+	width: 102px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    border: 0;
+    background: none;
+    background-color: #38f;
+    font-size: 16px;
+    color: white;
+    box-shadow: none;
+    font-weight: normal;
+    outline: none;
+}
+.search-form{
+	position: relative;
+	text-align: left;
+}
+.search_wrap form span{
+	position: absolute;
+	right: 185px;
+	top: 11px;
+	height: 20px;
+	width: 20px;
+	background: url(img/camera.png) no-repeat;
+	background-size: 20px;
+}
+/*主搜索区域结束*/
+
+/*浮动搜索区开始*/
+.search_float_wrap{
+	width: 100%;
+	box-sizing: border-box;
+	height: 75px;
+	background: rgba(255,255,255,0.95);
+	box-shadow: 0 0 3px rgba(0,0,0,.2);
+	border-bottom: 1px solid #ddd;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	padding-top: 15px;
+	display: none;
+}
+.search_float_wrap div{
+	width: 825px;
+	margin: 0 auto;
+}
+.search_float_wrap div img,.search_float_wrap div form{
+	float: left;
+}
+.search_float_wrap>div>img{
+	margin-right: 20px;
+}
+.search_float_wrap form input{
+	float: left;
+	box-sizing: border-box;
+	height: 40px;
+	width: 600px;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-right: none;
+	font-size: 16px;
+	line-height: 40px;
+	padding-left: 20px;
+	outline: none;
+}
+.search_float_wrap form{
+	position: relative;
+}
+.search_float_wrap form span{
+	position: absolute;
+	right: 115px;
+	top: 11px;
+	height: 20px;
+	width: 20px;
+	background: url(img/camera.png) no-repeat;
+	background-size: 20px;
+}
+/*浮动搜索区结束*/
+
+/*内容面板开始*/
+.user_main{
+	width: 893px;
+	margin: 0 auto;
+	margin-top: 70px;
+	position: relative;
+}
+/*分面板选择器*/
+.card_selector{
+	color: #333;
+	height: 39px;
+	line-height: 39px;
+	font-size: 14px;
+	text-align: center;
+	border-bottom: 1px solid #e9e9e9;
+	background: rgba(255,255,255,1);
+}
+.card_selector li{
+	width: 80px;
+	float: left;
+}
+.card_selector li:nth-child(1){
+	width: 124px;
+}
+.card_selector li:last-child{
+	float: right;
+	width: 25px;
+	height: 25px;
+	background: url(img/card_setts.png);
+	background-position: -117px -45px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.card_selector li:nth-child(1) span{
+	background:url(img/card_setts.png);
+	background-position: -17px 0;
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+	margin-right: 10px;
+}
+.cur_selector{
+	background: rgba(240,240,240,.7);
+	font-weight: bold;
+}
+.card_selector li:hover{
+	background: rgba(240,240,240,.7);
+}
+
+/*推荐卡片*/
+.recommended{
+	position: relative;
+}
+.card_recommended{
+	padding: 20px;
+	background: rgba(255,255,255,0.85);
+}
+
+.recommended_tip{
+	margin-right: 30%;
+	text-align: center;
+}
+.recommended_tip span{
+	background: url(img/news.png);
+	background-position: -44px 0px;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.recommended_tip p{
+	display: inline-block;
+	font-size: 13px;
+	color: rgba(0,0,0,.4);
+	vertical-align: middle;
+}
+.recommended_tip b{
+	background: #ddd;
+    display: inline-block;
+    width: 200px;
+    height: 1px;
+	vertical-align: middle;
+}
+
+.recommended_list{
+	padding-top: 20px;
+	padding-left:10px;
+	margin-right: 30%;
+}
+.recommended_list img{
+	padding-top: 10px;
+	width: 189px;
+}
+.recommended_list span{
+	color: rgba(0,0,0,.4);
+	font-size: 13px;
+	line-height: 15px;
+	margin-right: 10px;
+	display: inline-block;
+}
+.list-source{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.recommended_hot{
+	border: 1px red solid;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+/*侧边悬浮面板*/
+.card_suspension{
+	width: 270px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.card_suspension li{
+	float: left;
+	width: 135px;
+	padding-top: 15px;
+	box-sizing: border-box;
+}
+.card_suspension a{
+	font-size: 14px;
+	text-decoration: none;
+	color: #333;
+}
+.card_suspension a:hover{
+	color: #0079f4;
+}
+.suspension_hot a:hover{
+	color: #333;
+}
+.suspension_change{
+	text-align: right;
+}
+.suspension_change a{
+	margin-right: 20px;
+}
+
+/*导航卡片设置开始*/
+.guide{
+	padding: 20px;
+	background: rgba(255,255,255,0.85);
+	display: none;
+}
+.guide dt h1{
+	font-size: 14px;
+}
+.guide dd{
+	display: inline-block;
+    height: 58px;
+    line-height: 58px;
+    width: 117px;
+    background-color: #fcfcfc;
+    border: 1px solid #fcfcfc;
+    margin-right: 20px;
+    margin-top:15px; 
+}
+.guide dd img{
+	vertical-align: middle;
+	padding-left: 15px;
+}
+.guide dd span{
+	display: inline-block;
+	padding-left: 10px;
+}
+/*导航卡片设置结束*/
+
+/*切换卡片*/
+.recommended{
+	/*display: none;*/
+}
+
+/*换肤功能区域*/
+/*背景*/
+#background_img{
+	background-size: cover;	
+	background-attachment: fixed;
+	margin:0;
+	padding: 0;
+}
+.background_1{
+	background: url(img/b11.jpg) no-repeat 50% 50%;
+}
+.background_2{
+	background: url(img/b22.jpg) no-repeat 50% 50%;
+}
+.background_3{
+	background: url(img/b33.jpg) no-repeat 50% 50%;
+}
+.background_4{
+	background: url(img/b44.jpg) no-repeat 50% 50%;
+}
+
+/*换肤器*/
+.skin_panel{
+	position: absolute;
+	display: none;
+	top: 0;
+	z-index: 20;
+	width: 100%;
+	height: 200px;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+.skin_panel ul li{
+	padding-top: 60px;
+	display: inline-block;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.skin_panel img{
+	height: 100px;
+}
+
+
+/*底部样式*/
+footer{
+	text-align: center;
+	padding: 50px;
+}
+footer a{
+    color: #999;
+    margin-left: 10px;
+}

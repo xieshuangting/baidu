@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度一下，你就知道</title>
+	<link rel="stylesheet" href="baidu.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body id="background_img">
+	<!-- 通顶的导航标题栏 -->
+	<header>
+		<!-- 天气中心 -->
+		<section class="weather">
+			<h1 class="weather_addr"><a href="#">深圳:</a></h1>
+			<div class="temperature_wrap">
+				<a href="#"><img src="img/a1.png" id="current_temp_icon"></a>
+				<span id="current-temperature">18℃</span>
+				<!--未来天气块-->
+				<div class="future_temper_wrap">
+					<p class="current_data">01月28日<span>农历十二月十九</span></p>
+					<p><a href="#">未来七天天气</a></p>
+					<ul>
+						<li>
+							<a href="#">
+								<p>今天（周四）</p>
+								<img src="img/a1.jpg">
+								<p>-18℃</p>
+								<p>多云</p>
+								<p>东南风</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>今天（周四）</p>
+								<img src="img/a1.jpg">
+								<p>-18℃</p>
+								<p>多云</p>
+								<p>东南风</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>今天（周四）</p>
+								<img src="img/a1.jpg">
+								<p>-18℃</p>
+								<p>多云</p>
+								<p>东南风</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>今天（周四）</p>
+								<img src="img/a1.jpg">
+								<p>-18℃</p>
+								<p>多云</p>
+								<p>东南风</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>今天（周四）</p>
+								<img src="img/a2.jpg">
+								<p>-18℃</p>
+								<p>多云</p>
+								<p>东南风</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 空气质量 -->
+			<div class="airquality_wrap">
+				<a href="#"><span class="air_level">良</span><span class="air_figure">87</span></a>
+			</div>
+		</section>
+		<!-- 天气中心结束 -->
+
+		<!-- 个人习惯设置 -->
+		<section class="user">
+			<ul>
+				<li><a href="#" id="change_skin">换肤</a></li>
+				<li><a href="#">消息</a></li>
+			</ul>
+		</section>
+
+		<!-- 主导航条设置 -->
+		<nav class="main_menu">
+			<ul>
+				<li><a href="http://news.baidu.com/" target="_blank">新闻</a></li>
+				<li><a href="https://www.hao123.com/?tn=94044711_hao_pg" target="_blank">hao123</a></li>
+				<li><a href="http://map.baidu.com/" target="_blank">地图</a></li>
+				<li><a href="http://v.baidu.com/" target="_blank">视频</a></li>
+				<li><a href="http://tieba.baidu.com/" target="_blank">贴吧</a></li>
+				<li><a href="#">学术</a></li>
+				<li>
+					<a href="#">username</a>
+					<ul id="user_info">
+						<li><a href="#">我的VIP</a></li>
+						<li><a href="#">个人中心</a></li>
+						<li><a href="#">账号设置</a></li>
+						<li><a href="#">意见反馈</a></li>
+						<li><a href="#">退出</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">设置</a>
+					<ul id="user_config">
+						<li><a href="#">搜索设置</a></li>
+						<li><a href="#">高级搜索</a></li>
+						<li><a href="#">关闭预测</a></li>
+						<li><a href="#">搜索历史</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<aside>
+		<a href="#"><h1>更多产品</h1></a>
+		<ul>
+			<li>
+				<a href="#">
+					<img src="img/bdbri.png">
+					<p>糯米</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/music.png">
+					<p>音乐</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/image.png">
+					<p>图片</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/zhidao.png">
+					<p>知道</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/wenku.png">
+					<p>文库</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/bang.png">
+					<p>风云榜</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">更多产品&gt;&gt;</a>
+			</li>
+		</ul>
+	</aside>
+
+	<!-- 整个页面内容 -->
+	<article>
+		<!-- 主搜索条 -->
+		<section class="search_wrap">	
+			<img src="img/logo.png" alt="百度图片" width="270" height="129">
+			<form action="https://www.baidu.com/s" method="get" target="_blank" class="search-form">
+				<input type="text" name="wd">
+				<button type="submit">百度一下</button>
+				<span></span>
+			</form>
+		</section>
+
+		<!-- 浮动搜索条 -->
+		<section class="search_float_wrap">
+			<div>
+				<img src="img/logo_top_ca79a146.png" width="101px">
+				<form action="https://www.baidu.com/s" method="get" target="_blank">
+					<input type="text" name="wd">
+					<button type="submit">百度一下</button>
+					<span></span>
+				</form>
+			</div>
+		</section>
+
+		<!-- 内容面板 -->
+		<section class="user_main">
+			<!-- 分面板选择器 -->
+			<ul class="card_selector">
+				<li ><span></span>我的关注</li>
+				<li class="cur_selector">推荐</li>
+				<li>导航</li>
+				<li><span></span></li>
+			</ul>
+			<!-- 推荐面板卡片区 -->
+			<section class="recommended">
+				<section class="card_recommended">
+					<div class="recommended_tip">
+						<b></b>
+						<span></span>
+						<p>以下信息根据您的兴趣推荐</p>
+						<b></b>
+					</div>
+					<div class="recommended_list">
+						<dl>
+							<dd>
+								<h2>李小璐回应夜宿PG One家：筹备电影，感谢贾乃亮信任</h2>
+								<img src="img/u=3855646200,4013500182&fm=173&s=22F251860571BBC05CD5B90D01003081&w=218&h=146&img.JPEG">
+								<img src="img/u=4146443905,4045361510&fm=173&s=7890EC1A174855434E7D24DE0000D0B1&w=218&h=146&img.JPG">
+								<img src="img/u=2656601142,708139947&fm=173&s=7812A81A41CEC4EB1E68F1DE000010B2&w=218&h=146&img.JPG">
+								<div class="list-source">
+									<span>搜狐新闻</span>
+									<span>12-31 19:34</span>
+									<span class="recommended_hot">热点</span>
+								</div>
+							</dd>
+							<dd>
+								<h2>李小璐回应夜宿PG One家：筹备电影，感谢贾乃亮信任</h2>
+								<img src="img/u=3855646200,4013500182&fm=173&s=22F251860571BBC05CD5B90D01003081&w=218&h=146&img.JPEG">
+								<img src="img/u=4146443905,4045361510&fm=173&s=7890EC1A174855434E7D24DE0000D0B1&w=218&h=146&img.JPG">
+								<img src="img/u=2656601142,708139947&fm=173&s=7812A81A41CEC4EB1E68F1DE000010B2&w=218&h=146&img.JPG">
+								<span>搜狐新闻</span>
+								<span>12-31 19:34</span>
+								<span class="recommended_hot">热点</span>
+							</dd>
+							<dd>
+								<h2>李小璐回应夜宿PG One家：筹备电影，感谢贾乃亮信任</h2>
+								<img src="img/u=3855646200,4013500182&fm=173&s=22F251860571BBC05CD5B90D01003081&w=218&h=146&img.JPEG">
+								<img src="img/u=4146443905,4045361510&fm=173&s=7890EC1A174855434E7D24DE0000D0B1&w=218&h=146&img.JPG">
+								<img src="img/u=2656601142,708139947&fm=173&s=7812A81A41CEC4EB1E68F1DE000010B2&w=218&h=146&img.JPG">
+								<span>搜狐新闻</span>
+								<span>12-31 19:34</span>
+								<span class="recommended_hot">热点</span>
+							</dd>
+							<dd>
+								<h2>李小璐回应夜宿PG One家：筹备电影，感谢贾乃亮信任</h2>
+								<img src="img/u=3855646200,4013500182&fm=173&s=22F251860571BBC05CD5B90D01003081&w=218&h=146&img.JPEG">
+								<img src="img/u=4146443905,4045361510&fm=173&s=7890EC1A174855434E7D24DE0000D0B1&w=218&h=146&img.JPG">
+								<img src="img/u=2656601142,708139947&fm=173&s=7812A81A41CEC4EB1E68F1DE000010B2&w=218&h=146&img.JPG">
+								<span>搜狐新闻</span>
+								<span>12-31 19:34</span>
+								<span class="recommended_hot">热点</span>
+							</dd>
+							<dd>
+								<h2>李小璐回应夜宿PG One家：筹备电影，感谢贾乃亮信任</h2>
+								<img src="img/u=3855646200,4013500182&fm=173&s=22F251860571BBC05CD5B90D01003081&w=218&h=146&img.JPEG">
+								<img src="img/u=4146443905,4045361510&fm=173&s=7890EC1A174855434E7D24DE0000D0B1&w=218&h=146&img.JPG">
+								<img src="img/u=2656601142,708139947&fm=173&s=7812A81A41CEC4EB1E68F1DE000010B2&w=218&h=146&img.JPG">
+								<span>搜狐新闻</span>
+								<span>12-31 19:34</span>
+								<span class="recommended_hot">热点</span>
+							</dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- 悬浮分面板选择器 -->
+				<ul class="card_suspension">
+					<li class="suspension_hot"><h3><a href="#">时事热点</a></h3></li>
+					<li class="suspension_change"><a href="#">换一换</a></li>
+					<li><a href="#">Baby疑回应假唱</a></li>
+					<li><a href="#">港珠澳桥全线亮灯</a></li>
+					<li><a href="#">教师飞机上改试卷</a></li>
+					<li><a href="#">Baby疑回应假唱</a></li>
+					<li><a href="#">港珠澳桥全线亮灯</a></li>
+					<li><a href="#">教师飞机上改试卷</a></li>
+					<li><a href="#">Baby疑回应假唱</a></li>
+					<li><a href="#">港珠澳桥全线亮灯</a></li>
+					<li><a href="#">教师飞机上改试卷</a></li>
+					<li><a href="#">Baby疑回应假唱</a></li>
+					<li><a href="#">港珠澳桥全线亮灯</a></li>
+					<li><a href="#">教师飞机上改试卷</a></li>
+					<li><a href="#">Baby疑回应假唱</a></li>
+					<li><a href="#">港珠澳桥全线亮灯</a></li>
+					<li><a href="#">教师飞机上改试卷</a></li>
+					<li><a href="#">Baby疑回应假唱</a></li>
+					<li><a href="#">港珠澳桥全线亮灯</a></li>
+					<li><a href="#">教师飞机上改试卷</a></li>
+				</ul>
+			</section>
+			<section class="guide">
+				<dl>
+					<dt><h1>猜你喜欢</h1></dt>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+					<dd><img src="img/g_1.png"><span>百度糯米</span></dd>
+				</dl>
+			</section>
+		</section>
+	</article>
+
+	<!-- 换肤器面板 -->
+	<div class="skin_panel">
+		<ul>
+			<li><img src="img/b11.jpg"></li>
+			<li><img src="img/b22.jpg"></li>
+			<li><img src="img/b33.jpg"></li>
+			<li><img src="img/b44.jpg"></li>
+		</ul>
+	</div>
+
+	<footer>
+		<p>
+			<a href="#">把百度设为首页</a>
+			<a href="#">关于百度</a>
+			<a href="#">about baidu</a>
+		</p>
+	</footer>
+	<script src="app.js"></script>
+</body>
+</html>
